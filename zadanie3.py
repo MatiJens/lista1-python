@@ -1,5 +1,6 @@
 def podzbiory(x):
     """
+    @author Mateusz Jenś
     Zwraca listę wszystkich podzbiorów zbioru.
 
     Funkcja przyjmuje zbiór jako argument i zwraca listę wszystkich możliwych podzbiorów

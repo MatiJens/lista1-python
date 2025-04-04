@@ -1,5 +1,7 @@
 def wspolne(a,b):
-    """Zwraca listę wspólnych elementów dwóch list, unikając duplikatów.
+    """
+    @author Mateusz Jenś
+    Zwraca listę wspólnych elementów dwóch list, unikając duplikatów.
 
     Funkcja porównuje dwie listy, a i b, i zwraca listę zawierającą elementy,
     które występują w obu listach. Każdy element pojawia się w wynikowej liście tylko raz,

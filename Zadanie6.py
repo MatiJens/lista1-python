@@ -1,5 +1,6 @@
 def komplement(DNA):
     """
+    @author Mateusz Jenś
     Zwraca komplementarną nić DNA.
 
     Funkcja konwertuje DNA (reprezentowaną jako lista nukleotydów) na komplementarną nić DNA,
@@ -38,7 +39,9 @@ def komplement(DNA):
         raise TypeError("Niepoprawny typ danych wejściowych")
 
 def transkrybuj(nic_matrycowa):
-    """Przeprowadza transkrypcję DNA na RNA.
+    """
+    @author Mateusz Jenś
+    Przeprowadza transkrypcję DNA na RNA.
 
     Funkcja konwertuje nić matrycową DNA (reprezentowaną jako lista nukleotydów) na
     komplementarną nić RNA, gdzie A jest zastępowane przez U, T przez A, C przez G,
@@ -77,7 +80,9 @@ def transkrybuj(nic_matrycowa):
         raise TypeError("Niepoprawny typ danych wejściowych")
 
 def transluj(mRNA):
-    """Przeprowadza translację mRNA na aminokwasy.
+    """
+    @author Mateusz Jenś
+    Przeprowadza translację mRNA na aminokwasy.
 
     Funkcja tłumaczy mRNA na sekwencję aminokwasów (białko) zgodnie z kodem genetycznym.
      Proces tłumaczenia rozpoczyna sie po napotkaniu kodonu stopu a, zatrzymuje się po

@@ -2,6 +2,7 @@ import math
 
 def heron(a,b,c):
     """
+    @author Mateusz Jenś
     Oblicza pole trójkąta na podstawie długości boków za pomocą wzoru Herona.
 
     Funkcja najpierw sprawdza, czy podane wartości są typu int oraz czy mogą utworzyć trójkąt.

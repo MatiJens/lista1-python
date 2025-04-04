@@ -1,5 +1,6 @@
 def collatz(c):
     """
+    @author Mateusz Jenś
     Zwraca ciąg liczb według hipotezy Collatza dla danej liczby całkowitej.
 
     Funkcja generuje ciąg liczb, który zaczyna się od wartości c. Jeśli c jest liczbą parzystą, dzielimy ją przez 2,

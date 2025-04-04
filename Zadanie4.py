@@ -1,5 +1,6 @@
 def Fibonacci_iteracyjnie(n):
     """
+    @author Mateusz Jenś
     Oblicza n-ty wyraz ciągu Fibonacciego iteracyjnie.
 
     Funkcja oblicza n-ty wyraz ciągu Fibonacciego za pomocą podejścia iteracyjnego.
@@ -43,6 +44,7 @@ def Fibonacci_iteracyjnie(n):
 
 def Fibonacci_rekurencyjnie(n):
     """
+    @author Mateusz Jenś
     Oblicza n-ty wyraz ciągu Fibonacciego rekurencyjnie.
 
      Funkcja oblicza n-ty wyraz ciągu Fibonacciego za pomocą podejścia rekurencyjnego.
