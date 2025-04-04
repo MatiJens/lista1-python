@@ -1,4 +1,24 @@
 def komplement(DNA):
+    """
+    Zwraca komplementarną nić DNA.
+
+    Funkcja konwertuje DNA (reprezentowaną jako lista nukleotydów) na komplementarną nić DNA,
+    gdzie A jest zastępowane przez T, T przez A, C przez G, a G przez C.
+
+    Args:
+        DNA (list): Lista nukleotydów (A, T, C, G) reprezentujących nić DNA.
+
+    Returns:
+        list: Komplementarna nić DNA.
+
+    Raises:
+        ValueError: Jeżeli lista zawiera niewłaściwe nukleotydy.
+        TypeError: Jeżeli wejście nie jest listą.
+
+    Examples:
+        >>> komplement(['A', 'T', 'C', 'G'])
+        ['T', 'A', 'G', 'C']
+    """
     if type(DNA) == list:
         if all(nukleotyd in "ATCG" for nukleotyd in DNA): #sprawdzenie czy w DNA wystepuja jedynie ATCG
             nic_matrycowa = [] #utworzenie pustej tablicy z wynikami
@@ -18,6 +38,26 @@ def komplement(DNA):
         raise TypeError("Niepoprawny typ danych wejściowych")
 
 def transkrybuj(nic_matrycowa):
+    """Przeprowadza transkrypcję DNA na RNA.
+
+    Funkcja konwertuje nić matrycową DNA (reprezentowaną jako lista nukleotydów) na
+    komplementarną nić RNA, gdzie A jest zastępowane przez U, T przez A, C przez G,
+    a G przez C.
+
+    Args:
+        nic_matrycowa (list): Nić matrycowa DNA, reprezentowana jako lista nukleotydów (A, T, C, G).
+
+    Returns:
+        list: Komplementarna nić RNA (A, U, C, G).
+
+    Raises:
+        ValueError: Jeżeli lista zawiera niewłaściwe nukleotydy.
+        TypeError: Jeżeli wejście nie jest listą.
+
+    Examples:
+        >>> transkrybuj(['A', 'T', 'C', 'G'])
+        ['U', 'A', 'G', 'C']
+    """
     if type(nic_matrycowa) == list:
         if all(nukleotyd in "ATCG" for nukleotyd in nic_matrycowa): #sprawdzenie czy w nici matrycowej wystepuja jedynie ATCG
             RNA = []
@@ -37,7 +77,27 @@ def transkrybuj(nic_matrycowa):
         raise TypeError("Niepoprawny typ danych wejściowych")
 
 def transluj(mRNA):
-    # w celu wykonania tego słownika wykorzystałem ChatGPT
+    """Przeprowadza translację mRNA na aminokwasy.
+
+    Funkcja tłumaczy mRNA na sekwencję aminokwasów (białko) zgodnie z kodem genetycznym.
+     Proces tłumaczenia rozpoczyna sie po napotkaniu kodonu stopu a, zatrzymuje się po
+     napotkaniu kodonu stopu.
+
+    Args:
+        mRNA (list): Lista nukleotydów RNA (A, U, C, G), reprezentująca łańcuch mRNA.
+
+    Returns:
+        list: Lista aminokwasów (np. "Phe", "Leu") tworząca białko.
+
+    Raises:
+        ValueError: Jeżeli lista zawiera niewłaściwe nukleotydy.
+        TypeError: Jeżeli wejście nie jest listą.
+
+    Examples:
+        >>> transluj(['A', 'U', 'G', 'U', 'U', 'U','U','A','G'])
+        ['Phe']
+    """
+    # w celu wykonania tego słownika wykorzystałem ChatGPT, prompt: "napisz mi slownik w pythonie kodon : aminokwas (wersja 3 literowa) pomin kodon start i stop"
     aminokwasy = {
         "UUU": "Phe", "UUC": "Phe",
         "UUA": "Leu", "UUG": "Leu",

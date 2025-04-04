@@ -1,4 +1,28 @@
 def Fibonacci_iteracyjnie(n):
+    """
+    Oblicza n-ty wyraz ciągu Fibonacciego iteracyjnie.
+
+    Funkcja oblicza n-ty wyraz ciągu Fibonacciego za pomocą podejścia iteracyjnego.
+    Dla n = 0 zwraca 0, dla n = 1 zwraca 1. Dla pozostałych wartości n oblicza wyraz
+    ciągu na podstawie dwóch pierwszych wyrazów ciągu, wykorzystując pętlę.
+
+    Args:
+        n (int): Indeks wyrazu ciągu Fibonacciego.
+
+    Returns:
+        int: n-ty wyraz ciągu Fibonacciego.
+
+    Raises:
+        ValueError: Jeżeli n jest mniejsze niż 0.
+        TypeError: Jeżeli n nie jest liczbą całkowitą.
+
+    Examples:
+        >>> Fibonacci_iteracyjnie(5)
+        5
+
+        >>> Fibonacci_iteracyjnie(10)
+        55
+    """
     if type(n) == int: # sprawdzenie poprawnosci danych wejsciowych
         if n >= 0:
             if n == 0:  # pierwsze dwie wartosci zbioru wynosza 0, 1 i sa z gory narzucone
@@ -18,6 +42,30 @@ def Fibonacci_iteracyjnie(n):
         raise TypeError("Niepoprawne typ danych wejściowych")
 
 def Fibonacci_rekurencyjnie(n):
+    """
+    Oblicza n-ty wyraz ciągu Fibonacciego rekurencyjnie.
+
+     Funkcja oblicza n-ty wyraz ciągu Fibonacciego za pomocą podejścia rekurencyjnego.
+     Dla n = 0 zwraca 0, dla n = 1 zwraca 1. Dla pozostałych wartości n funkcja wywołuje
+     sama siebie z mniejszymi argumentami, aż osiągnie warunki końcowe.
+
+     Args:
+         n (int): Indeks wyrazu ciągu Fibonacciego.
+
+     Returns:
+         int: n-ty wyraz ciągu Fibonacciego.
+
+     Raises:
+         ValueError: Jeżeli n jest mniejsze niż 0.
+         TypeError: Jeżeli n nie jest liczbą całkowitą.
+
+     Examples:
+         >>> Fibonacci_rekurencyjnie(5)
+         5
+
+         >>> Fibonacci_rekurencyjnie(10)
+         55
+     """
     if type(n) == int: # sprawdzenie poprawnosci danych wejsciowych
         if n >= 0:
             if n == 0:  # warunki koncowe rekurencji
